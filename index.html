@@ -5,26 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio Digital | Valent Aditya Hermanus</title>
     <link rel="stylesheet" href="tes.css" />
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" href="asset/LOGO.png">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
   </head>
   <body>
-    <!-- navbar -->
     <nav class="navbar">
       <div class="container">
-        <div class="logo">SANTAIIN<span>AJA.ID</span></div>
+        <div class="logo">SANTAN<span>AJA</span>.ID</div>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">Profil</a></li>
           <li><a href="#portfolio">Portofolio</a></li>
           <li><a href="#gallery">Galeri</a></li>
           <li><a href="#contact">contact</a></li>
+
+          <li class="darkmode-wrapper">
+            <input type="checkbox" id="darkToggle" class="dark-input" />
+            <label for="darkToggle" class="dark-switch"></label>
+          </li>
         </ul>
+
         <!-- <div class="menu-toggle">
                 <input type="checkbox">
                 <span></span>
@@ -40,7 +48,7 @@
         <h1 class="fade-in">
           Halo, Saya <span id="typing-text"></span><span class="cursor">|</span>
         </h1>
-        <p class="fade-in">Web Designer | Web Developer</p>
+        <p class="fade-in">Web Developer | Web Desain</p>
         <a href="#about" class="btn fade-in">Ayo Kenali Saya Lebih Dalam</a>
       </div>
     </header>
@@ -59,53 +67,185 @@
           <div class="about-text">
             <h3>Siapa Saya?</h3>
             <p>
-              Saya adalah seorang pelajar/mahasiswa yang berfokus pada
-              pengembangan solusi digital yang kreatif dan fungsional. Saya
-              percaya bahwa teknologi dan seni dapat berjalan beriringan untuk
-              menciptakan dampak positif.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Id eaque doloribus debitis veritatis fugit maxime ab veniam voluptatibus perspiciatis at nemo commodi error vero dolore, deleniti aut. Nam, sapiente in.
             </p>
             <p>
-              <strong>Keahlian:</strong> HTML, CSS, JavaScript, UI/UX Design,
-              Creative Writing.
+              <strong>Keahlian:</strong> Lorem, ipsum dolor sit amet consectetur adipisicing elit. In veritatis sed dolorem vitae, id accusantium nisi ipsa ullam aliquid hic consequuntur tempore enim facere, veniam natus ex distinctio quasi, quidem voluptatibus! Officia.
             </p>
+            <a href="cv.pdf" download="cv.pdf" class="btn-cv"> Download Cv </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Menu Portfolio -->
     <section id="portfolio" class="section bg-light">
       <div class="container">
-        <h2 class="section-title">Portofolio</h2>
-        <div class="portfolio-grid">
-          <div class="card">
-            <div class="card-content">
-              <div class="card-header">
-                <h3>Project Web A</h3>
-                <span class="tag">Web Design</span>
-              </div>
-              <p>Website e-commerce sederhana menggunakan HTML & CSS.</p>
-            </div>
+        <!-- <h2 class="section-title">Galeri Karya</h2> -->
+      </div>
+      <div class="container">
+        <div class="porto-head">
+          <div>
+            <small class="porto-kicker">Valent Aditya Hermanus</small>
+            <h2 class="porto-title">
+              Portofolio <br />
+            </h2>
           </div>
-          <div class="card">
-            <div class="card-content">
-              <div class="card-header">
-                <h3>App Interface</h3>
-                <span class="tag">UI/UX</span>
-              </div>
-              <p>Desain antarmuka aplikasi manajemen keuangan.</p>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-content">
-              <div class="card-header">
-                <h3>Branding Logo</h3>
-                <span class="tag">Graphic Design</span>
-              </div>
 
-              <p>Pembuatan identitas visual untuk UMKM Lokal.</p>
-            </div>
+          <div class="porto-actions">
+            <button class="porto-icon-btn" type="button" aria-label="Previous" id="p-prev">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="porto-icon-btn" type="button" aria-label="Next" id="p-next">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
+        </div>
+
+        <div class="porto-grid" id="page1">
+          <!-- Card 1 -->
+          <article class="porto-card">
+            <div class="porto-img">
+              <img src="https://picsum.photos/900/600?random=11" alt="COINAC" />
+            </div>
+
+            <div class="porto-body">
+              <div class="porto-text">
+                <h3>bubu 1  </h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus fuga quaerat quisquam recusandae facilis, necessitatibus nobis, alias blanditiis sint vitae exercitationem.
+                </p>
+              </div>
+              <div class="porto-year">2020</div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="porto-card">
+            <div class="porto-img">
+              <img src="https://picsum.photos/900/600?random=12" alt="COPLO" />
+            </div>
+
+            <div class="porto-body">
+              <div class="porto-text">
+                <h3>contoh2</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat possimus id temporibus veniam et tempore officia nisi blanditiis facere, sapiente quasi nam, laborum, neque quisquam.
+                </p>
+              </div>
+              <div class="porto-year">2021</div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="porto-card">
+            <div class="porto-img">
+              <img
+                src="https://picsum.photos/900/600?random=13"
+                alt="HECTORY"
+              />
+            </div>
+
+            <div class="porto-body">
+              <div class="porto-text">
+                <h3>contoh 3</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatem, et in architecto eos laboriosam sed aperiam adipisci iure!
+                </p>
+              </div>
+              <div class="porto-year">2022</div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="porto-card">
+            <div class="porto-img">
+              <img src="https://picsum.photos/900/600?random=14" alt="VITYK" />
+            </div>
+
+            <div class="porto-body">
+              <div class="porto-text">
+                <h3>contoh 4</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus accusamus, vel, voluptate aut minima quo quam assumenda quas atque officiis vitae.
+                </p>
+              </div>
+              <div class="porto-year">2024</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="porto-grid hidden" id="page2">
+          <!-- Card 1 -->
+          <article class="porto-card">
+            <div class="porto-img">
+              <img src="https://picsum.photos/900/600?random=18" alt="COINAC" />
+            </div>
+
+            <div class="porto-body">
+              <div class="porto-text">
+                <h3>contoh 1  </h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus fuga quaerat quisquam recusandae facilis, necessitatibus nobis, alias blanditiis sint vitae exercitationem.
+                </p>
+              </div>
+              <div class="porto-year">2020</div>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="porto-card">
+            <div class="porto-img">
+              <img src="https://picsum.photos/900/600?random=17" alt="COPLO" />
+            </div>
+
+            <div class="porto-body">
+              <div class="porto-text">
+                <h3>contoh2</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quaerat possimus id temporibus veniam et tempore officia nisi blanditiis facere, sapiente quasi nam, laborum, neque quisquam.
+                </p>
+              </div>
+              <div class="porto-year">2021</div>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="porto-card">
+            <div class="porto-img">
+              <img
+                src="https://picsum.photos/900/600?random=16"
+                alt="HECTORY"
+              />
+            </div>
+
+            <div class="porto-body">
+              <div class="porto-text">
+                <h3>contoh 3</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus voluptatem, et in architecto eos laboriosam sed aperiam adipisci iure!
+                </p>
+              </div>
+              <div class="porto-year">2022</div>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="porto-card">
+            <div class="porto-img">
+              <img src="https://picsum.photos/900/600?random=15" alt="VITYK" />
+            </div>
+
+            <div class="porto-body">
+              <div class="porto-text">
+                <h3>contoh 4</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus accusamus, vel, voluptate aut minima quo quam assumenda quas atque officiis vitae.
+                </p>
+              </div>
+              <div class="porto-year">2024</div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -114,25 +254,50 @@
     <section id="gallery" class="section">
       <div class="container">
         <h2 class="section-title">Galeri Karya</h2>
-        <div class="gallery-grid">
-          <!-- Gunakan gambar karya asli Anda di sini -->
-          <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=1" alt="Karya 1" />
+      </div>
+
+      <div class="gallery-marquee">
+        <div class="gallery-track">
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="https://picum.photos/400/300?random=1" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://picsum.photos/400/300?random=2" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://picsum.photos/400/300?random=3" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://picsum.photos/400/300?random=4" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://picsum.photos/400/300?random=5" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://picsum.photos/400/300?random=6" alt="" />
+            </div>
           </div>
-          <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=2" alt="Karya 2" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=3" alt="Karya 3" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=4" alt="Karya 4" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=5" alt="Karya 5" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://picsum.photos/400/300?random=6" alt="Karya 6" />
+
+          <div class="gallery-grid" aria-hidden="true">
+            <div class="gallery-item">
+              <img src="https://picsum.photos/400/300?random=1" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://picsum.photos/400/300?random=2" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://picsum.photos/400/300?random=3" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://picsum.photos/400/300?random=4" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://picsum.photos/400/300?random=5" alt="" />
+            </div>
+            <div class="gallery-item">
+              <img src="https://picsum.photos/400/300?random=6" alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -144,52 +309,67 @@
 
         <div class="contact-unified-card">
           <div class="contact-info-side">
-    <div class="info-header">
-        <h3>Mari Terhubung</h3>
-        <p>Silakan hubungi saya jika ada pertanyaan atau tawaran kerja sama.</p>
-    </div>
+            <div class="info-header">
+              <h3>Mari Terhubung</h3>
+              <p>
+                Silakan hubungi saya jika ada pertanyaan atau tawaran kerja
+                sama.
+              </p>
+            </div>
 
-    <div class="info-list">
-        <a href="mailto:valent.aditya@gmail.com" class="info-item">
-            <div class="icon-box">
-                <i class="fas fa-envelope"></i>
-            </div>
-            <div class="info-text">
-                <span>EMAIL</span>
-                <p>valent.aditya@gmail.com</p>
-            </div>
-        </a>
+            <div class="info-list">
+              <a href="mailto:valent.aditya@gmail.com" class="info-item">
+                <div class="icon-box">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-text">
+                  <span>EMAIL</span>
+                  <p>valent.aditya@gmail .com</p>
+                </div>
+              </a>
 
-        <a href="https://wa.me/6281234567890" target="_blank" class="info-item">
-            <div class="icon-box">
-                <i class="fab fa-whatsapp"></i>
-            </div>
-            <div class="info-text">
-                <span>WHATSAPP</span>
-                <p>+62 812 3456 7890</p>
-            </div>
-        </a>
+              <a
+                href="https://wa.me/6287836118750"
+                target="_blank"
+                class="info-item"
+              >
+                <div class="icon-box">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div class="info-text">
+                  <span>WHATSAPP</span>
+                  <p>+62 878 3611 8750</p>
+                </div>
+              </a>
 
-        <a href="https://instagram.com/valent_aditya" target="_blank" class="info-item">
-            <div class="icon-box">
-                <i class="fab fa-instagram"></i>
+              <a
+                href="https://www.instagram.com/ryuu.len/"
+                target="_blank"
+                class="info-item"
+              >
+                <div class="icon-box">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <div class="info-text">
+                  <span>INSTAGRAM</span>
+                  <p>@ryuu.len</p>
+                </div>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/valent-aditya-hermanus/"
+                target="_blank"
+                class="info-item"
+              >
+                <div class="icon-box">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div class="info-text">
+                  <span>LINKEDIN</span>
+                  <p>@valent aditya hermanus</p>
+                </div>
+              </a>
             </div>
-            <div class="info-text">
-                <span>INSTAGRAM</span>
-                <p>@valent_aditya</p>
-            </div>
-        </a>
-        <a href="https://instagram.com/valent_aditya" target="_blank" class="info-item">
-            <div class="icon-box">
-                <i class="fab fa-linkedin"></i>
-            </div>
-            <div class="info-text">
-                <span>LINKEDIN</span>
-                <p>@valent_aditya</p>
-            </div>
-        </a>
-    </div>
-</div>
+          </div>
 
           <div class="contact-form-side">
             <form action="#kontak">
@@ -216,7 +396,7 @@
                 <input
                   type="text"
                   id="phone"
-                  placeholder="+62 8xx-xxxx-xxxx"
+                  placeholder="08xx-xxxx-xxxx"
                   required
                   maxlength="18"
                 />
@@ -230,7 +410,7 @@
                   required
                 ></textarea>
               </div>
-              <button type="submit" class="btn-kontak" id="button" >
+              <button type="submit" class="btn-kontak" id="button">
                 Kirim Pesan
               </button>
             </form>
@@ -242,31 +422,56 @@
     <!-- Footer -->
     <footer>
       <div class="container">
-        <p>&copy; 2024 Valent Aditya hermanus</p>
+        <p>&copy; 2024-2025 Valent Aditya hermanus</p>
       </div>
     </footer>
 
     <script>
-      const text = "Valent Aditya Hermanus";
-      const typingSpeed = 150;
+      // ===========================================================
+      const nama_panjang = "Valent Aditya Hermanus";
+      const nama_panggilan = "Valent";
+      const kecepatan_nulis = 100;
+      const kecepatan_hapus = 50;
+      const jeda = 5000;
       const element = document.getElementById("typing-text");
-      let i = 0;
 
-      function typeWriter() {
-        if (i < text.length) {
-          element.innerHTML += text.charAt(i);
+      let currentText = nama_panjang;
+      let i = 0;
+      let hapus_text = false;
+      let cek_text = true;
+
+      function runn() {
+        const fullText = cek_text ? nama_panjang : nama_panggilan;
+
+        if (hapus_text) {
+          element.innerHTML = fullText.substring(0, i - 1);
+          i--;
+        } else {
+          element.innerHTML = fullText.substring(0, i + 1);
           i++;
-          setTimeout(typeWriter, typingSpeed);
         }
+
+        let delay = hapus_text ? kecepatan_hapus : kecepatan_nulis;
+
+        if (!hapus_text && i === fullText.length) {
+          hapus_text = true;
+          delay = jeda;
+        } else if (hapus_text && i === 0) {
+          hapus_text = false;
+          cek_text = !cek_text;
+          delay = 500;
+        }
+
+        setTimeout(runn, delay);
       }
 
-      window.onload = typeWriter;
+      window.onload = runn;
 
       // ===========================================================
 
-      const phoneInput = document.getElementById("phone");
+      const form_notelp = document.getElementById("phone");
 
-      phoneInput.addEventListener("input", function (e) {
+      form_notelp.addEventListener("input", function (e) {
         let input = e.target.value.replace(/\D/g, "");
 
         if (input.startsWith("0")) {
@@ -299,7 +504,7 @@
         e.target.value = formatted;
       });
 
-      phoneInput.addEventListener("keydown", function (e) {
+      form_notelp.addEventListener("keydown", function (e) {
         if (
           e.target.value.length <= 3 &&
           (e.key === "Backspace" || e.key === "Delete")
@@ -307,30 +512,145 @@
         }
       });
 
-      // =========================================================
+      // ===========================================================
 
-     document.querySelector('#contact form').addEventListener('submit', function(e) {
-      e.preventDefault();
+      document
+        .querySelector("#contact form")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const message = document.getElementById('message').value;
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const message = document.getElementById("message").value.trim();
 
-      if (name && email && phone && message) {
-        Swal.fire({
-          position: "center",
-          icon: "success",
-          title: "Pesan telah terkirim!",
-          text: "Terima kasih sudah menghubungi saya.",
-          showConfirmButton: false,
-          timer: 2500,
+          if (!name || !email || !phone || !message) return;
+
+          const tujuanWA = "6287836118750";
+          const teks = `Halo, saya ${name}\nEmail: ${email}\nNo HP: ${phone}\nPesan:\n${message}`;
+
+          const url = `https://wa.me/${tujuanWA}?text=${encodeURIComponent(
+            teks
+          )}`;
+
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Membuka WhatsApp...",
+            text: "Pesan sudah disiapkan. Tinggal tekan Kirim di WhatsApp.",
+            showConfirmButton: false,
+            timer: 1800,
+          }).then(() => {
+            window.open(url, "_blank");
+            this.reset();
+          });
         });
-        this.reset();
 
-        console.log("Form berhasil dikirim:", {name, email, phone, message});
+      // ===========================================================
+
+      (function () {
+        const track = document.getElementById("portfolioTrack");
+        const carousel = document.getElementById("portfolioCarousel");
+        if (!track || !carousel) return;
+
+        const baseItems = Array.from(track.children);
+
+        baseItems.forEach((item) => track.appendChild(item.cloneNode(true)));
+        baseItems.forEach((item) => track.appendChild(item.cloneNode(true)));
+
+        let index = 0;
+        let isPaused = false;
+        const intervalMs = 2500;
+
+        function visibleCount() {
+          return window.innerWidth <= 768 ? 1 : 3;
+        }
+
+        function cardFullWidth() {
+          const first = track.querySelector(".p-card");
+          if (!first) return 0;
+          const styles = window.getComputedStyle(track);
+          const gap = parseFloat(styles.columnGap || styles.gap || "0") || 0;
+          return first.getBoundingClientRect().width + gap;
+        }
+
+        function moveNext() {
+          if (isPaused) return;
+
+          const step = cardFullWidth();
+          if (!step) return;
+
+          index += 1;
+          track.style.transition = "transform 0.6s ease";
+          track.style.transform = `translateX(-${index * step}px)`;
+
+          const resetPoint = baseItems.length;
+          const maxIndexBeforeReset = resetPoint * 2;
+
+          if (index >= maxIndexBeforeReset) {
+            setTimeout(() => {
+              track.style.transition = "none";
+              index = resetPoint;
+              track.style.transform = `translateX(-${index * step}px)`;
+            }, 650);
+          }
+        }
+
+        function initPosition() {
+          const step = cardFullWidth();
+          const start = baseItems.length;
+          index = start;
+          track.style.transition = "none";
+          track.style.transform = `translateX(-${index * step}px)`;
+        }
+
+        carousel.addEventListener("mouseenter", () => (isPaused = true));
+        carousel.addEventListener("mouseleave", () => (isPaused = false));
+
+        window.addEventListener("load", initPosition);
+        window.addEventListener("resize", () => {
+          initPosition();
+        });
+
+        setInterval(moveNext, intervalMs);
+      })();
+
+      // ===========================================================
+      const toggle = document.getElementById("darkToggle");
+
+      if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark-mode");
+        toggle.checked = true;
       }
-    });
+
+      toggle.addEventListener("change", () => {
+        document.body.classList.toggle("dark-mode");
+
+        localStorage.setItem(
+          "theme",
+          document.body.classList.contains("dark-mode") ? "dark" : "light"
+        );
+      });
+
+      // ===========================================================
+
+      const page1 = document.getElementById("page1");
+      const page2 = document.getElementById("page2")
+      const nextbutton = document.getElementById("p-next");
+      const prevbutton = document.getElementById("p-prev")
+
+      
+      nextbutton.addEventListener('click', function (){
+        page1.classList.add('hidden');
+        page2.classList.remove('hidden');
+        console.log("next telah aktif dan ini di page2")
+      })
+
+      prevbutton.addEventListener('click', function(){
+        page1.classList.remove('hidden');
+        page2.classList.add('hidden');
+        console.log("prev telah aktif dan ini di page 1")
+      })
     </script>
   </body>
 </html>
