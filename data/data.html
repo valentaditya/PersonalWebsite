@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Data kontak</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Poppins, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 40px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #020617;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 12px;
+      border-bottom: 1px solid #1e293b;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: #020617;
+      color: #38bdf8;
+    }
+    tr:hover td {
+      background: rgba(255,255,255,0.04);
+    }
+    .btn {
+      margin-bottom: 15px;
+      padding: 10px 18px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .danger {
+      background: #dc2626;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Kontak Masuk</h1>
+<button class="btn danger" onclick="hapusData()">Hapus Semua</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>Nama</th>
+      <th>Email</th>
+      <th>Nomor</th>
+      <th>Pesan</th>
+      <th>Tanggal Kirim</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+
+<script>
+  const data = JSON.parse(localStorage.getItem("kontakMasuk")) || [];
+  const tbody = document.getElementById("tableBody");
+
+  data.forEach((item, index) => {
+    const row = document.createElement("tr");
+    row.innerHTML = `
+      <td>${index + 1}</td>
+      <td>${item.nama}</td>
+      <td>${item.email}</td>
+      <td>${item.nomor}</td>
+      <td>${item.pesan}</td>
+      <td>${item.tanggal}</td>
+    `;
+    tbody.appendChild(row);
+  });
+
+  function hapusData() {
+    if (confirm("Yakin hapus semua data?")) {
+      localStorage.removeItem("kontakMasuk");
+      location.reload();
+    }
+  }
+</script>
+
+</body>
+</html>

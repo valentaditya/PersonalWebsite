@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pfolio Digital | Valent Aditya Hermanus</title>
+    <link rel="icon" href="../asset/LOGO.png" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="logo">SANTAN<span>AJA</span>.ID</div>
+
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">Profil</a></li>
+          <li><a href="#portfolio">Portofolio</a></li>
+          <li><a href="#galeri-karya">Galeri</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+
+          <li class="darkmode-wrapper">
+            <input type="checkbox" id="darkToggle" class="dark-input" />
+            <label for="darkToggle" class="dark-switch"></label>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <header id="home" class="hero">
+      <div class="container hero-content">
+        <h1 class="fade-in">
+          Halo, Saya <span id="typing-text"></span><span class="cursor">|</span>
+        </h1>
+        <p class="fade-in">Web Developer | Web Desain</p>
+        <a href="#about" class="btn fade-in">Ayo Kenali Saya Lebih Dalam</a>
+      </div>
+    </header>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <h2 class="section-title">Profil Diri</h2>
+
+        <div class="about-card">
+          <div class="about-left">
+            <div class="about-photo">
+              <img
+                src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISERUSEw8VFRUWFRUVFRUVFxUYFRAXFRUWFxUVFRcYHSggGholHRcXITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGi0dHx0tLS0tLS0tLS0tLS0tLSsrKy0tLS0tLS0tLS0tLTA3LS0tLS0tKystLS0tLSsrLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAAAQIFAwQGBwj/xABCEAABAwEEBwQIBAQEBwAAAAABAAIDEQQhMUEFBhJRYXGBEyIykQdCUqGxwdHwFCNygmKSsuEVc6LxMzQ1Q1Njwv/EABsBAQADAQEBAQAAAAAAAAAAAAABAgMEBQYH/8QALhEBAQACAQMCAwYHAQAAAAAAAAECEQMEITESUQYywQUTIkFx0TRCYXKCkeEU/9oADAMBAAIRAxEAPwDMhRRVdDFJCinVSGmo1RVA0k1FQhMJFFUigRKEUQUAokokka0Vc4AbyQFg/HRVp2rP5m/VBnTSY8HAg8ipUUgCaSKoGEISQNJNJEBCChABBQEFEhCEKUBCSEDQmolVSE1GikpAmEk0AkgoCBhMIVPrDp1tmbQDakd4W5Di7gopJts6X0vFZ21e6/1WjxO5DdxXC6R1ttEpoykbeAqfM/JaEpknkL3mrnG/5dFN2i35BY3kbY8bWne6Q1e8uPEkqDYRvW0yxO3LKyxurQtKr6l/TWCG1TRmscrmnmb+huV1Y9cZ2eNrZP8ASfMXe5Yv8LOz4aj7zVdNo94NNkpOQvG7ewa12eS5zuzdufSnR2Cu2uBFQajeM15FJCQaEK30Dph9mO+L1mbuLdxWsz92Vw9npAQsNitTZWB7DVrhULNVaMwhCRKBlJJClBoKQTUJCEilVEHVNQqmpGRJNOihKKEJ0QKiSlRFEQimEJolgt9rbDG6R5uaK8+AXJRaNdaCZ5bnPva32W+r7ldaahMs0cR8DR2rx7RBoxp4YlbbGZrk6jk12js6bil/FVfY9CMF9Fbw6OZTwhThHFbkTblx3K13zGRqf4XH7HVTk0Ww5LdAWaJhUbqdRqR2JrRSlywWixNNxartsRWvaIFbVV3HBawaFHiaFyjoy04D6r1HScFW/fmuE0rZwHGtRupvXRxZXWq5ObCb3G1qZbw15iqe+SQMmkVw5j5Ls15dYrQ6OQGmDg4Hka3HzXqDDUArswu44s5qmkpUSorKop0TRREIhNFE0EShOiKIFRCaaJSQUqpKA1JQqpVUhoSQgEIQiGnZ4tuSV24sYP2tr8XLK+BwpVpod+CnoBu0JhvlePfctzZo3ZJwN28cL8rl5/LN5V6nBdYyHYrMaVu+fmtuOCmJ8vqoWIhwpS9bwipkstNvU1zGKLLZQLqlSmbwWOJh3cEnlPmNuYjJYJGVyUwDmETuo2nXnwWjJQaclo3ouStXfaSbzTpTGq6jSsReLvvoucliLRhdfUc+G5MarnHJ2ph3UAPQb/NejaLk2oY3b2NNd9wXGWyO4GmA4cr11urrq2aKvsBdfHXDyxYhFE01syRKKppEIhEKSEIEhBSCCSSEIJEKNFNFFCUEKdEEKRBFVKiVEQVVIIomAiRq5c+dm6Ta/ma13zK2phUkUuritWwuDJnnIsaeZbtA/Fq1tJ9pKQGEtaczguLlneu/iv4YuIrVG0Y3gYb+BW3/AIkwhrh16/YXFzaO2Kn8U0ncTcpaPt7g7ZdlddmsLdeHRNXy6q2aUAvFPoqh+npXGjGk8aG/yULdESNoscBv3qnsdumfOIYWhtKd75kkHyAqmPcy7R11g0lKRWRhO8H5LNJbWvN12FxxAXERaT0p+KdZ2x7JB8bmHYDQDeHGoIJpT4DK5sFotJcGz2ZrX5PjILD82rTLbPGy+FlaR98VQaei2aEcl01oiNKnL4qk0vD2jaDG4+Syl1WuU3i5mPRUto2mRAYUJOA/uuibH+DgijIdLsNDXOYAA2l1bzesuiJW2eHvODQXEuJ4kAV5XK8EbHMaWOEgJI/mvGPVaXkynyspw435orGODgHA1BFQpJNi2QWjJxoN2BI86prt4svVjLXBzYTDOyFRCaiVoyFEykE0EShCAFIEJ0QgmhNJQkBNIJqUCiVE0IIpppUUBBo2gTuLfOn0VVbIZ552wlrmWWMVkc00fJdU03ipHQHgrlmI5hZpJJAXNGeZXLzdstu3p++OnIWHVdzZzK6cvs/eDWEua9wqS1rib7q4g1NAFZ6L0cGPaPFS/awqMrluDRxBqXk8FvaOs19agg7rweFVzZZbdeGExXQ7zACMb8N65u26NMcm00DGtQAT1XQyxkCt9OCrLZbQxw7RhDTcH40PFVlX014NsnCnMUr5qys8T1khjaQHBwIyIyVi2PZYDUX+fC9TN1F1FXbjQUVATWqs9Iy4qqJWdWnhnh0YyaNzZB3O9fQ0aaVBuwOCxaAhdGHDaJbQC/eHCi3NGDabTG+pBrSuXPA+Sy2loacanIYBtReaDNaSeqyRS5TGW1heak35+fH5pUUKKQXp446mnkZZeq20KJTKFKpBCYSKkJAQiqAqkmhQMiSiCnVA1JRqmCpAhCEAmkmoCKtJow6Nsm4XqsWUWoiNzN94WHUY7x26ely1lpXaY0s0FkQNNt7GOdmA5wBI3XK1h0tZ4yGxua7YFHDdyXFOjMlqApc0Ej9WA+JXS2izNa1rX0aMbzeeK5JHfcu+ozaR12ZEAxsRlc43NYAT51oAm98tsZ+bB2Iuo2oLrrwTS4ea0Q2yxO2g4E7gCSfNbMOskI9WQ3XUU9kbrThmfZn9m93dOBV8zSNW3Fczb9LC0kxss8j7r3bJAZx2sPJZNFNcGUfiKiu/d5hUymlsct9ltK+qr5jRbML81qTnaeAFSRa3TVFumitADQDG5ja19VwcTXjcfcrt7iTUmpOaqZhVxCtI3VAPALt6eTdcPVW6hpJpVXW4hRKidUIBIppIFRFEIQOiEkICiSmkoEUAqVEiEACpAqICYQSCaiFIIBRc1SQoym5pbHL03cUtr0eS6oNK1aSLscL+gWY6Ck29qR7pGbJq03Ft4NQ4YkAZ1xVg6PLf7lcT1LDfQ7PncuH03G6r0ZnMpuNWyFrDtRwxt/a03c6LYgma8ODiGAGoDWgVdWpO/wD3XKvs059YjdSoW/o/Rsl1XH6qN6X1PZfWVjaXYfFVOkotnbIGNPPBXbAI2gZqg0vpBpcGg538lnl3Wl7teV2wwVzHmsVibcXnE/DJa9otHaPp6o+C37O3auyxJ3DcmMLdtUtoeYJ81cQWF4s7JfVc5zRwIJ92PkVd6vapGZwlmBbHiG4OkGXJvxVt6RLZFZ9HvJc1lNkRNI8TgRRrQOFeQXVw42Xbk6jKWajiiEUVdoHSzbTFtgUIJa5u4j5EXqyXU4kdlIqaRCkIIKEqIEmEIQCE0IGhNJAkJoQIIopAIooESEwE0IBCEKQLYs9rpc7ofkVrrb0TY+2mZHSoJ736Re73LPPCZRpx53G9mvJbWg43dEjpNjR4h0RrnoFkUv5bi0PqWtyu8QHxp9FxU8EwNBsczX4VouX7vvp3Tk7L23aeJqa43D73qlbM5xJOJ+ClYdFyyODWNdI87hcOVMuVy9A1c9HBufaSR/A03n9Ry6JONW8mnL6D0VNaHbEMZdhtOwa39RyXqGrup8cADpSJHi+nqNO8DM8T5K/sFhjhYGRsDGjJop1O88VQa665w2BhbdJORVkQ9zpCPC33nJaY4SMsuW1Yay6ww2KEyzO4MYKbcrvZaPicAvnXXHWSfSExkkNwqGMb4Y21wG87zn5AQ1h01Pa5TLNIXOP8rBk1gyaFWxwklayaY7b+qdu7CehPcko13A17p8zTqvRV5daYxTjgAM13OhNLtkjY17w2SgDgbqkZiuNVfH2Uy91xVJBSVlUggpApkoIppIQSQkhBJFE0kAkU0IAFCSFAaEk1IEIWlb9KQwiskrW8Ce8eTReVA3V1uqFlDI32h5AB7rSbgGjxHzFOi8ph1rNonjs9li2nyPDA+S5ra4uLReQBUm8XBdnrJb9l9ni2ndkx7G7Iu27wC4jfSpVcrfTbj31FpNWbbWs1qg0gTZYJT27e/G/ZfsNe28d+lOBpkSFh1W1GlmdtWx2xs0rEwtLn83tNA3lfyV66EVoB5XUWxCDCRMDe28gYPbmN2C+Qx+JccssZnx697v6ad/3NksldPYtHxQt2Y42sH8IpXmc1s0WOzztexr2mrXAEHgVwvpK11/CtNmgd+e4d5w/7DT/9nLdjuX1OP4vDmvbywekH0iizbVnspa6a8PkuLYOAyc/3DOuC8atE75HOe9znPcauc41LicySoT41N9czvzUXOWsmme9oiMZpTTBo9wGZ4KEklLyVrOk23AjACg51vPwTZo9ok1N3yWQSnnzvUSEwESudE6wSRUBO2z2XG8fpdlyXWWPTMMoFH7J9l1x+h6LzghSYTvUyouL1UJFefWDSs8fheSNxvHlkryya1jCWMj+Jt48j9VbamnTIWCy2yOVu0x4cOGXMZLMFKDomkhBNFEIQJCkEiECSomuO1u1qdE7sYCNsXOdjsn2W8eKi3SZNuvKo9K60wQ1Ad2j/AGWYA8XYD3rz2W3TO8cr3E41cT05LAGrO5rzBcaU1qtE1QH9m32WXebsSqh8N995Pz45rHI1bkU1Gt9qlDwph7qKvlbw630cWVsMstrkoGwQOP6XSd0H+XtF3uoDfxrXW6Zvde9zYGGhDI2Ghcf4i4Or+kLxqzPmkrZ2OP57o2FuUjtv8sHk53vX0lYbAyzQMs7PDFG2NvGgoTzJqeqcnNOHiyzvjGW1Hp3UYS2taiuVTitLStod2bthj5Dfstbi44U5cVZSeCgurlS8lbj5YrJZXzPNGtaXOOfIcTgBxX579j/Z3/t5bll8uOt/tHdy8nonby4qLWS06Osj2zNHayEmzR49lUd4u3tFQeZ43eYzyOe5z3uLnOJc5xvLiTUkrb09peS12h88mLrmtyjYPCwfeJJWlQBfo2OGOE1jNSPP3b5YpYgRRVVqlLTsgVd5CmRVqsNqsxdhiM0pFMGFxq414ZBbDAsbBeRTh5LMBcqrhNJTaL1KEQs0Ue+5SDdw6lMUGJp97yiGRppgk4qun0oAaMCwxvkedybNLaF5Y7aY8tO9pp/uF2mhNJ9szvXPbQOG/c4c15+1haKkq31ctpbO2pud3T+7D30Uyosd3VCimrqM6EIQCaSaCr1i0h2EDnjxHut5nPoKnovKGNLnFxvvNPmV23pEtJ7kY3E9XGg+C5RkdBTcs8u9aY+GMMUtlD3UWQtVdLMOzegNWSiKIOv9Eeje20pESLoWvnP7Bst/1Paei9utTtp1Bka9V5z6DrLsstlqP/rgbzAL3/1Rr0KBt/vzzXzfxJ1n3fDODG98/P6T979W/BhvL1eycrgCDlULz70say9rILFE78uIgyU9eWlzeTfiTuXQa8aYFnh2ge/UbFd5Ip8CV486Qkkk1JJJJxJN5J6q/wAL8fp6XLL3y+kV6m/i1/Q9ql66mbV6OGymS0yOZI6MPjZde5wdsxkG/auFeBO6q5MTOaQ5ri0tIc1wxBBqCOScttlkEbZJXPEYc1m2aloc4vd3jebzmd25fRZTK61dMcdTyyMVba9JVJZHgPE/Lk3esWkrWT+Uw/qPyWCKKgoFNpInEFmCg0LLGyorgFCQ0FZ4o1AEC/75LDI55xOyNwxUoZ7Ta2sF5qdyrZHvkN9QNwxPPcpEsac3O3C8/QLbicKVIDR8OuZTyMEFkoMQBwx81sE0G/d/da8tpjNwJPIJsaD6rkEXXmrnjkMApWZ9Hgg1III4UNVJ0bBjVNkrRgg9M7VJYO1CFdRaFJCZUqkE0kwg4TXhu1aGDGjW14G8j4hUj2rf0pbBNPK4DCQs6MoAeoFVpTLNrGkfEFlUIb3LMAqpRolRZaLJYrEZpY4RcZXtjqMtogE9Bf0S3U3R7T6PbL2OjLO3OTatDsq9q4lleUewumiNByvxxHFYIow0BrbmtAaBUXNAAaOgACrNcNLfhrI9wPePcZWh2nOuB6Y9CvzPquXPr+stx/nup+niPQxkwweba+6X7e1OaD3IyWimBPrfToubBUS6/H+6TnL9I6bgx6fix4sfGMedllcst0yarBbZdht3iNwWUv2QSTQKuJLnbZHIbgtqRGGOnPMrZa1DGKZUJICponaJAC2MHG88h9hPa2W1zVQLQdokCpNwCW6Fw+YNFSVpTTFwuOww+scXfpGJU4LEfE81dxwbyGZU5XMYauPe43u6AYIhhgYQO4yg9t+J4hqzCx1veS8/xYdBgm2Zx8MLzxNG/FZmGT/xgfuBQNsAGAA5BNwpcPM5I72bfJRc9WQgYRmVARsBxHmsc1TiaD4qMFlaTc2/ebyqpdb+KehXX+DN3FCv3U2uEimhWVIFKWTZaTuBPkFJamlbT2cMj7rmmlczS4eageawDvSP9og9byfio2o3LJARQkZmvuCwzlZ/k1RszcVmChC25ZESdF0vo2sHa6RY6lRCx8h3VI7Nter6/tXNr0n0PWL8u0TkeORsQuyjbtfF/uXmfbHP9z0fJlPNmv8AfZpxTecehAcOBuHmeC8u9KGlu0nbADdEKu4vdePIf1Fek6QtTYonyO8LWkuuoTsity8GtlpdLI+R2L3Fx4Emq+b+Guk9fNea+MPH63/jfqc9Y692HJRxUqLBapKd0Yn3DMr7hxMNocXu2QO63Hif7LKyNSbEAAFJooFCUC8blkjbUHJYiQn29BcpGrb5e798Vq6NAHfd0/txRpB9wG9OzNNbhUi4E4M4niqfmn8m5NaDSpd2bTh7Tvp0Ss8rG+GNxO/Zx6k1WSKyAXnvOzJxW0xnTkrI2GWjeKc6BSMvAqJs7cxVY+4PVIVkJ9vTGoyvCi+Xc5SAr4XdCsUsAzGzxHzQatocRe5rXDeLiFvaKa0vjpgXsBHNwWqYyMwRvyPNWmrzAbREB7QPlf8AJR+aXo1UKKFdkmhCFIa5L0heCH/Md/Q5JCi+FsfLlbB4DzH9LVGX5IQs2jNBgUxihCAdgvXPRV/04f50n9QQheB8SfwX+U+rbp/nWOvX/I2j9I/qavF2YlJCz+F/4bL+76RPU/NDOS0j/wAXohC+kc7aP0WOZCEo1wsUmKaFCWhbsR95KysPg6lJCrPJW6Pv3KbfvzQhaKsixOz5oQhELNj98FshNCCvPrdfirnUv/j/ALXfBCFE8l8O7QhCuzf/2Q=="
+                alt="Foto Profil"
+              />
+
+              <div class="about-status">
+                <span class="dot"></span>
+                <span>Available for freelance</span>
+              </div>
+            </div>
+
+            <div class="about-quick">
+              <div class="quick-item">
+                <small>Role</small>
+                <p>Web Developer</p>
+              </div>
+              <div class="quick-item">
+                <small>Domisili</small>
+                <p>Purwokerto</p>
+              </div>
+              <div class="quick-item">
+                <small>Fokus</small>
+                <p>UI/UX • Frontend</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <p class="about-kicker">Halo! Saya</p>
+
+            <h3 class="about-title">
+              Valent Aditya Hermanus
+              <span class="about-highlight">— membangun website yang rapi & cepat</span>
+            </h3>
+
+            <p class="about-desc">
+              Saya seorang <strong>Web Developer</strong> yang fokus pada pembuatan tampilan modern,
+              responsif, dan mudah digunakan. Saya suka mengubah ide menjadi antarmuka yang enak dilihat,
+              serta memastikan pengalaman pengguna tetap nyaman.
+            </p>
+
+            <div class="about-points">
+              <div class="point">
+                <i class="fa-solid fa-bolt"></i>
+                <div>
+                  <h4>judul</h4>
+                  <p>subjudul.</p>
+                </div>
+              </div>
+
+              <div class="point">
+                <i class="fa-solid fa-layer-group"></i>
+                <div>
+                  <h4>juduk</h4>
+                  <p>subjudul.</p>
+                </div>
+              </div>
+
+              <div class="point">
+                <i class="fa-solid fa-mobile-screen"></i>
+                <div>
+                  <h4>judul</h4>
+                  <p>subjudul.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-skills">
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">UI/UX</span>
+              <span class="skill">Figma</span>
+              <span class="skill">Responsive</span>
+            </div>
+
+            <div class="about-actions">
+              <a href="../asset/about/cv.pdf" download="cv.pdf" class="btn-cv">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                Download CV
+              </a>
+
+              <a href="#k" class="btn-outline">
+                <i class="fa-solid fa-paper-plane"></i>
+                Hubungi Saya
+              </a>
+            </div>
+
+            <div class="about-meta">
+              <div class="meta-item">
+                <small>Email</small>
+                <p>valent.aditya@gmail.com</p>
+              </div>
+              <div class="meta-item">
+                <small>Instagram</small>
+                <p>@ryuu.len</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== PORTFOLIO ===================== -->
+    <section id="portfolio" class="section bg-light">
+      <div class="container">
+        <div class="p-head">
+          <div>
+            <small class="p-kicker">Valent Aditya Hermanus</small>
+            <h2 class="p-title">portofolio <br /></h2>
+          </div>
+
+          <div class="p-actions">
+            <button class="p-icon-btn" type="button" aria-label="Previous" id="p-prev">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="p-icon-btn" type="button" aria-label="Next" id="p-next">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="p-grid" id="page1">
+          <article class="p-card">
+            <div class="p-img">
+              <img src="https://picsum.photos/900/600?random=11" alt="COINAC" />
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>bubu 1</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Repellendus fuga quaerat quisquam recusandae facilis,
+                  necessitatibus nobis, alias blanditiis sint vitae exercitationem.
+                </p>
+              </div>
+              <div class="p-year">2020</div>
+            </div>
+          </article>
+
+          <article class="p-card">
+            <div class="p-img">
+              <img src="https://picsum.photos/900/600?random=12" alt="COPLO" />
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>contoh2</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                  quaerat possimus id temporibus veniam et tempore officia nisi
+                  blanditiis facere, sapiente quasi nam, laborum, neque quisquam.
+                </p>
+              </div>
+              <div class="p-year">2021</div>
+            </div>
+          </article>
+
+          <article class="p-card">
+            <div class="p-img">
+              <img src="https://picsum.photos/900/600?random=13" alt="HECTORY" />
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>contoh 3</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                  voluptatem, et in architecto eos laboriosam sed aperiam adipisci iure!
+                </p>
+              </div>
+              <div class="p-year">2022</div>
+            </div>
+          </article>
+
+          <article class="p-card">
+            <div class="p-img">
+              <img src="https://picsum.photos/900/600?random=14" alt="VITYK" />
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>contoh 4</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellendus accusamus, vel, voluptate aut minima quo quam assumenda quas atque officiis vitae.
+                </p>
+              </div>
+              <div class="p-year">2024</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="p-grid hidden" id="page2">
+          <article class="p-card">
+            <div class="p-img">
+              <img src="https://picsum.photos/900/600?random=18" alt="COINAC" />
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>contoh 1</h3>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Repellendus fuga quaerat quisquam recusandae facilis,
+                  necessitatibus nobis, alias blanditiis sint vitae exercitationem.
+                </p>
+              </div>
+              <div class="p-year">2020</div>
+            </div>
+          </article>
+
+          <article class="p-card">
+            <div class="p-img">
+              <img src="https://picsum.photos/900/600?random=17" alt="COPLO" />
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>contoh2</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+                  quaerat possimus id temporibus veniam et tempore officia nisi
+                  blanditiis facere, sapiente quasi nam, laborum, neque quisquam.
+                </p>
+              </div>
+              <div class="p-year">2021</div>
+            </div>
+          </article>
+
+          <article class="p-card">
+            <div class="p-img">
+              <img src="https://picsum.photos/900/600?random=16" alt="HECTORY" />
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>contoh 3</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
+                  voluptatem, et in architecto eos laboriosam sed aperiam adipisci iure!
+                </p>
+              </div>
+              <div class="p-year">2022</div>
+            </div>
+          </article>
+
+          <article class="p-card">
+            <div class="p-img">
+              <img src="https://picsum.photos/900/600?random=15" alt="VITYK" />
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>contoh 4</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Repellendus accusamus, vel, voluptate aut minima quo quam assumenda quas atque officiis vitae.
+                </p>
+              </div>
+              <div class="p-year">2024</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GALERI KARYA ===================== -->
+    <section id="galeri-karya" class="section">
+      <div class="container">
+        <h2 class="section-title">Galeri Karya</h2>
+      </div>
+
+      <div class="g-marquee">
+        <div class="g-track" id="galeri-Track">
+          <div class="g-item">
+            <img src="https://picsum.photos/400/300?random=1" alt="Karya 1" />
+            <div class="g-overlay">
+              <h4>Project UI</h4>
+              <p>Landing page modern + animasi halus</p>
+            </div>
+          </div>
+
+          <div class="g-item">
+            <img src="https://picsum.photos/400/300?random=2" alt="Karya 2" />
+            <div class="g-overlay">
+              <h4>Web Dashboard</h4>
+              <p>Tampilan admin dengan tabel & statistik</p>
+            </div>
+          </div>
+
+          <div class="g-item">
+            <img src="https://picsum.photos/400/300?random=3" alt="Karya 3" />
+            <div class="g-overlay">
+              <h4>Portfolio</h4>
+              <p>Desain pfolio clean & responsive</p>
+            </div>
+          </div>
+
+          <div class="g-item">
+            <img src="https://picsum.photos/400/300?random=4" alt="Karya 4" />
+            <div class="g-overlay">
+              <h4>Branding</h4>
+              <p>Logo + warna brand konsisten</p>
+            </div>
+          </div>
+
+          <div class="g-item">
+            <img src="https://picsum.photos/400/300?random=5" alt="Karya 5" />
+            <div class="g-overlay">
+              <h4>Mobile UI</h4>
+              <p>Desain mobile app yang rapi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== KONTAK ===================== -->
+    <section id="kontak" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Hubungi Saya</h2>
+
+        <div class="k-unified-card">
+          <div class="k-info-side">
+            <div class="info-header">
+              <h3>Mari Terhubung</h3>
+              <p>Silakan hubungi saya jika ada pertanyaan atau tawaran kerja sama.</p>
+            </div>
+
+            <div class="info-list">
+              <a href="mailto:valent.aditya@gmail.com" class="info-item">
+                <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                <div class="info-text">
+                  <span>EMAIL</span>
+                  <p>valent.aditya@gmail.com</p>
+                </div>
+              </a>
+
+              <a href="https://wa.me/6287836118750" target="_blank" class="info-item">
+                <div class="icon-box"><i class="fab fa-whatsapp"></i></div>
+                <div class="info-text">
+                  <span>WHATSAPP</span>
+                  <p>+62 878 3611 8750</p>
+                </div>
+              </a>
+
+              <a href="https://www.instagram.com/ryuu.len/" target="_blank" class="info-item">
+                <div class="icon-box"><i class="fab fa-instagram"></i></div>
+                <div class="info-text">
+                  <span>INSTAGRAM</span>
+                  <p>@ryuu.len</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/valent-aditya-hermanus/"
+                target="_blank"
+                class="info-item"
+              >
+                <div class="icon-box"><i class="fab fa-linkedin"></i></div>
+                <div class="info-text">
+                  <span>LINKEDIN</span>
+                  <p>valent aditya hermanus</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="k-form-side">
+            <form id="Kontak-Form" action="#kontak" novalidate>
+              <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" placeholder="Masukkan nama Anda" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Masukkan email aktif" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">No Telepon</label>
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder="08xx-xxxx-xxxx"
+                  required
+                  maxlength="18"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder="Tulis pesan Anda di sini..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-kontak" id="button">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024-2025 Valent Aditya Hermanus</p>
+      </div>
+    </footer>
+
+    <!-- ===================== JAVASCRIPT ===================== -->
+    <script>
+      // ===================== EFEK TULISAN =====================
+      (function () {
+        const namaPanjang = "Valent Aditya Hermanus";
+        const namaPanggilan = "Valent";
+
+        const kecepatanNulis = 100;
+        const kecepatanHapus = 50;
+        const jeda = 5000;
+
+        const element = document.getElementById("typing-text");
+        if (!element) return;
+
+        let i = 0;
+        let hapusText = false;
+        let pakaiNamaPanjang = true;
+
+        function run() {
+          const fullText = pakaiNamaPanjang ? namaPanjang : namaPanggilan;
+
+          if (hapusText) {
+            element.textContent = fullText.substring(0, i - 1);
+            i--;
+          } else {
+            element.textContent = fullText.substring(0, i + 1);
+            i++;
+          }
+
+          let delay = hapusText ? kecepatanHapus : kecepatanNulis;
+
+          if (!hapusText && i === fullText.length) {
+            hapusText = true;
+            delay = jeda;
+          } else if (hapusText && i === 0) {
+            hapusText = false;
+            pakaiNamaPanjang = !pakaiNamaPanjang;
+            delay = 500;
+          }
+
+          setTimeout(run, delay);
+        }
+
+        window.addEventListener("load", run);
+      })();
+
+      // ===================== FORMAT TELP =====================
+      (function () {
+        const phoneInput = document.getElementById("phone");
+        if (!phoneInput) return;
+
+        phoneInput.addEventListener("input", function (e) {
+          let input = e.target.value.replace(/\D/g, "");
+
+          if (input.startsWith("0")) {
+            input = "62" + input.substring(1);
+          }
+
+          if (input.length === 0) {
+            e.target.value = "";
+            return;
+          }
+
+          let formatted = "+";
+
+          if (input.length > 0) formatted += input.substring(0, 2);
+          if (input.length > 2) formatted += " " + input.substring(2, 5);
+          if (input.length > 5) formatted += "-" + input.substring(5, 9);
+          if (input.length > 9) formatted += "-" + input.substring(9, 13);
+
+          e.target.value = formatted;
+        });
+      })();
+
+      // ===================== KONTAK SWAL+LOCAL =====================
+      (function () {
+        const form = document.getElementById("Kontak-Form");
+        if (!form) return;
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const message = document.getElementById("message").value.trim();
+
+          if (!name || !email || !phone || !message) {
+            Swal.fire({
+              icon: "warning",
+              title: "Form belum lengkap",
+              text: "Semua field wajib diisi.",
+            });
+            return;
+          }
+
+          const dataLama = JSON.parse(localStorage.getItem("kontakMasuk")) || [];
+
+          const dataBaru = {
+            nama: name,
+            email: email,
+            nomor: phone,
+            pesan: message,
+            tanggal: new Date().toLocaleString("id-ID"),
+          };
+
+          dataLama.push(dataBaru);
+          localStorage.setItem("kontakMasuk", JSON.stringify(dataLama));
+
+          Swal.fire({
+            title: "Mengirim...",
+            text: "Mohon tunggu sebentar",
+            allowOutsideClick: false,
+            didOpen: () => Swal.showLoading(),
+            timer: 1300,
+          }).then(() => {
+            Swal.fire({
+              icon: "success",
+              title: "Pesan terkirim!",
+              text: "Terima kasih sudah menghubungi saya.",
+              showConfirmButton: false,
+              timer: 1800,
+            });
+
+            form.reset();
+            document.getElementById("kontak").scrollIntoView({ behavior: "smooth" });
+          });
+        });
+      })();
+
+      // ===================== DARKMODE =====================
+      (function () {
+        const toggle = document.getElementById("darkToggle");
+        if (!toggle) return;
+
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.body.classList.add("dark-mode");
+          toggle.checked = true;
+        }
+
+        toggle.addEventListener("change", () => {
+          document.body.classList.toggle("dark-mode");
+          localStorage.setItem(
+            "theme",
+            document.body.classList.contains("dark-mode") ? "dark" : "light"
+          );
+        });
+      })();
+
+      // ===================== PORTOFOLIO PAGE =====================
+      (function () {
+        const page1 = document.getElementById("page1");
+        const page2 = document.getElementById("page2");
+        const nextBtn = document.getElementById("p-next");
+        const prevBtn = document.getElementById("p-prev");
+
+        if (!page1 || !page2 || !nextBtn || !prevBtn) return;
+
+        nextBtn.addEventListener("click", function () {
+          page1.classList.add("hidden");
+          page2.classList.remove("hidden");
+        });
+
+        prevBtn.addEventListener("click", function () {
+          page1.classList.remove("hidden");
+          page2.classList.add("hidden");
+        });
+      })();
+
+      // ===================== GALERI INVI =====================
+      (function () {
+        const track = document.getElementById("galeri-Track");
+        if (!track) return;
+
+        const originals = Array.from(track.children);
+
+        originals.forEach((item) => {
+          const clone = item.cloneNode(true);
+          clone.setAttribute("aria-hidden", "true");
+          track.appendChild(clone);
+        });
+
+        function setScrollDistance() {
+          let distance = 0;
+
+          originals.forEach((el) => {
+            distance += el.getBoundingClientRect().width;
+          });
+
+          const styles = getComputedStyle(track);
+          const gap = parseFloat(styles.gap || styles.columnGap || "0") || 0;
+
+          distance += gap * originals.length;
+          track.style.setProperty("--scroll-distance", `-${distance}px`);
+        }
+
+        window.addEventListener("load", setScrollDistance);
+        window.addEventListener("resize", setScrollDistance);
+      })();
+    </script>
+  </body>
+</html>
