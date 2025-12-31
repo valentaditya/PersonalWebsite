@@ -6,12 +6,14 @@
     <title>pfolio Digital | Valent Aditya Hermanus</title>
     <link rel="icon" href="../asset/LOGO.png" />
     <link rel="stylesheet" href="main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -55,7 +57,7 @@
       <div class="container">
         <h2 class="section-title">Profil Diri</h2>
 
-        <div class="about-card">
+        <div class="about-card" data-aos="fade-up">
           <div class="about-left">
             <div class="about-photo">
               <img
@@ -65,7 +67,7 @@
 
               <div class="about-status">
                 <span class="dot"></span>
-                <span>Available for freelance</span>
+                <span>Ready</span>
               </div>
             </div>
 
@@ -149,7 +151,7 @@
             <div class="about-meta">
               <div class="meta-item">
                 <small>Email</small>
-                <p>valent.aditya@gmail.com</p>
+                <p>valent.aditya1210@gmail.com</p>
               </div>
               <div class="meta-item">
                 <small>Instagram</small>
@@ -181,7 +183,7 @@
         </div>
 
         <div class="p-grid" id="page1">
-          <article class="p-card">
+          <article class="p-card" data-aos="fade-right" data-aos-duration="2000">
             <div class="p-img">
               <img src="https://picsum.photos/900/600?random=11" alt="COINAC" />
             </div>
@@ -198,7 +200,7 @@
             </div>
           </article>
 
-          <article class="p-card">
+          <article class="p-card" data-aos="fade-left" data-aos-duration="2000">
             <div class="p-img">
               <img src="https://picsum.photos/900/600?random=12" alt="COPLO" />
             </div>
@@ -215,7 +217,7 @@
             </div>
           </article>
 
-          <article class="p-card">
+          <article class="p-card" data-aos="fade-right" data-aos-duration="2000" >
             <div class="p-img">
               <img src="https://picsum.photos/900/600?random=13" alt="HECTORY" />
             </div>
@@ -231,7 +233,7 @@
             </div>
           </article>
 
-          <article class="p-card">
+          <article class="p-card" data-aos="fade-left" data-aos-duration="2000">
             <div class="p-img">
               <img src="https://picsum.photos/900/600?random=14" alt="VITYK" />
             </div>
@@ -248,7 +250,7 @@
           </article>
         </div>
 
-        <div class="p-grid hidden" id="page2">
+        <div class="p-grid hidden" id="page2" >
           <article class="p-card">
             <div class="p-img">
               <img src="https://picsum.photos/900/600?random=18" alt="COINAC" />
@@ -371,7 +373,7 @@
 
     <!-- ===================== KONTAK ===================== -->
     <section id="kontak" class="section bg-light">
-      <div class="container">
+      <div class="container" data-aos="fade-up" data-aos-duration="2000">
         <h2 class="section-title">Hubungi Saya</h2>
 
         <div class="k-unified-card">
@@ -382,11 +384,11 @@
             </div>
 
             <div class="info-list">
-              <a href="mailto:valent.aditya@gmail.com" class="info-item">
+              <a href="mailto:valent.aditya1210@gmail.com" class="info-item">
                 <div class="icon-box"><i class="fas fa-envelope"></i></div>
                 <div class="info-text">
                   <span>EMAIL</span>
-                  <p>valent.aditya@gmail.com</p>
+                  <p>valent.aditya1210@gmail.com</p>
                 </div>
               </a>
 
@@ -550,15 +552,29 @@
           e.preventDefault();
 
           const name = document.getElementById("name").value.trim();
-          const email = document.getElementById("email").value.trim();
+          let email = document.getElementById("email").value.trim();
           const phone = document.getElementById("phone").value.trim();
           const message = document.getElementById("message").value.trim();
+
+          if (!email.includes('@') ) {
+            Swal.fire({
+              icon: "warning",
+              title: "Format Email Salah",
+            
+            });
+            return;
+          }
+
+          if(email.includes(' ')){
+            pengubahan = email.replaceAll(' ', '');
+            email = pengubahan
+          }
 
           if (!name || !email || !phone || !message) {
             Swal.fire({
               icon: "warning",
               title: "Form belum lengkap",
-              text: "Semua field wajib diisi.",
+            
             });
             return;
           }
@@ -582,6 +598,7 @@
             allowOutsideClick: false,
             didOpen: () => Swal.showLoading(),
             timer: 1300,
+            
           }).then(() => {
             Swal.fire({
               icon: "success",
@@ -667,6 +684,10 @@
         window.addEventListener("load", setScrollDistance);
         window.addEventListener("resize", setScrollDistance);
       })();
+
+     
+      AOS.init();
+
     </script>
   </body>
 </html>

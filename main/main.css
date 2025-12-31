@@ -846,8 +846,7 @@ body {
   color: #333;
 }
 
-.form-group input,
-.form-group textarea {
+.form-group input{
   width: 100%;
   box-sizing: border-box;
   padding: 12px;
@@ -855,6 +854,19 @@ body {
   background: #f9f9f9;
   border-radius: 10px;
   font-family: inherit;
+}
+
+.form-group textarea {
+  /* width: 100%; */
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #eee;
+  background: #f9f9f9;
+  border-radius: 10px;
+  font-family: inherit;
+  max-width: 200px;
+  min-width:100%;
+  min-height:200px;
 }
 
 .form-group input:focus,
@@ -886,6 +898,11 @@ body {
 .link {
   text-decoration: none;
   color: white;
+}
+
+.swal2-popup {
+  background-color: #ffffff;
+  border-radius: 20px;
 }
 
 /* =========================================================
@@ -1046,7 +1063,6 @@ body.dark-mode .section-title::after {
   background: #38bdf8;
 }
 
-/* About (Dark) */
 body.dark-mode .about-card {
   background: #020617;
   border-color: #0b1220;
@@ -1091,10 +1107,13 @@ body.dark-mode .btn-outline {
   color: #e5e7eb;
 }
 
-/* Cards (Dark) */
 body.dark-mode .card {
   background: #020617;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .p-body{
+  background: #070F2B;
 }
 
 body.dark-mode .card-content p {
@@ -1107,27 +1126,43 @@ body.dark-mode .tag {
   border-color: #334155;
 }
 
-/* k (Dark) */
 body.dark-mode .k-unified-card {
   background: #020617;
 }
 
 body.dark-mode .k-form-side {
-  background: #020617;
+  background: #050e3c;
+}
+
+body.dark-mode .k-info-side{
+  background: #070F2B;
 }
 
 body.dark-mode .form-group label {
   color: #e5e7eb;
 }
 
-body.dark-mode .form-group input,
+body.dark-mode .form-group input{
+  background: #020617;
+  color: #e5e7eb;
+  border-color: #334155;
+
+}
 body.dark-mode .form-group textarea {
   background: #020617;
   color: #e5e7eb;
   border-color: #334155;
+  max-width: 200px;
+  min-width:100%;
+  min-height:200px;
 }
 
-/* Portfolio (Dark) */
+body.dark-mode .swal2-popup {
+  background-color: #0f172a;
+  color:#ffffff;
+  border-radius: 20px;
+}
+
 body.dark-mode .p-title {
   color: #e5e7eb;
 }
@@ -1157,14 +1192,13 @@ body.dark-mode .p-icon-btn {
   color: #e5e7eb;
 }
 
-/* Footer (Dark) */
 body.dark-mode footer {
   background: #050e3c;
 }
 
-/* =========================================================
-   MISC
-========================================================= */
+
 .blank {
   height: 100vh;
 }
+
+
