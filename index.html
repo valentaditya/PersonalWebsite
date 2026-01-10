@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Digital | Valent Aditya Hermanus</title>
+
+    <link rel="icon" href="../asset/LOGO.png" />
+    <link rel="stylesheet" href="main.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- ===================== NAVBAR ===================== -->
+    <header class="header">
+      <nav class="navbar-rev" id="mainNav">
+        <button class="button-open" id="menuToggle" aria-label="Open Menu">☰</button>
+        <div class="logo2">SANTAN<span>AJA</span>.ID</div>
+
+        <ul class="nav-links-revisi">
+          <li><a href="#home" class="item">Home</a></li>
+          <li><a href="#about" class="item">Profil</a></li>
+          <li><a href="#experience" class="item">Pengalaman</a></li>
+          <li><a href="#portfolio" class="item">Portofolio</a></li>
+          <li><a href="#galeri-karya" class="item">Galeri</a></li>
+          <li><a href="#kontak" class="item">Kontak</a></li>
+
+          <li class="darkmode-wrapper">
+            <input type="checkbox" id="darkToggle" class="dark-input" />
+            <label for="darkToggle" class="dark-switch"></label>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <header id="home" class="hero">
+      <div class="container hero-content">
+        <h1 class="fade-in">
+          Halo, Saya <span id="typing-text"></span><span class="cursor">|</span>
+        </h1>
+        <p class="fade-in">Web Developer | Web Desain</p>
+        <a href="#about" class="btn fade-in">Ayo Kenali Saya Lebih Dalam</a>
+      </div>
+    </header>
+
+    <!-- ===================== ABOUT  ===================== -->
+    <section id="about" class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Profil Diri</h2>
+
+        <div class="about-card" data-aos="fade-up">
+          <div class="about-left">
+            <div class="about-photo">
+              <img id="profileImage" src="../asset/about/foto.jpeg" alt="Foto Profil" />
+              <video id="profileVideo" src="../asset/about/vidio.mp4" loop></video>
+              <div class="about-status">
+                <span class="dot"></span>
+                <span>available for freelance</span>
+              </div>
+            </div>
+
+            <div class="about-quick">
+              <div class="quick-item">
+                <small>Role</small>
+                <p>Web Developer</p>
+              </div>
+              <div class="quick-item">
+                <small>Domisili</small>
+                <p>Yogyakarta</p>
+              </div>
+              <div class="quick-item">
+                <small>Fokus</small>
+                <p>Front-End</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-right">
+            <p class="about-kicker">Halo! Saya</p>
+
+            <h3 class="about-title">
+              Valent Aditya Hermanus
+              <span class="about-highlight">membangun website yang creative dan inovatif</span>
+            </h3>
+
+            <p class="about-desc">
+              Saya seorang <strong>Mahasiswa</strong> Atma Jaya Yogyakarta yang tertarik dalam bidang IT terutama <strong>Web Developer</strong>. 
+            </p>
+
+            <div class="about-points">
+              <div class="point">
+                <i class="fa-solid fa-bolt"></i>
+                <div>
+                  <h4>Pengalaman Sekolah</h4>
+                  <p>4 Tahun Belajar di sekolah IT</p>
+                </div>
+              </div>
+
+              <div class="point">
+                <i class="fa-solid fa-layer-group"></i>
+                <div>
+                  <h4>judul</h4>
+                  <p>subjudul.</p>
+                </div>
+              </div>
+
+              <div class="point">
+                <i class="fa-solid fa fa-flag-checkered"></i>
+                <div>
+                  <h4>Tujuan Karier</h4>
+                  <p>Mengembangkan skill di bidang Web Development dan siap berkontribusi dalam tim maupun individual.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-skills">
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">Angular</span>
+              <span class="skill">React</span>
+              <span class="skill">Figma</span>
+            </div>
+
+            <div class="about-actions">
+              <a href="../asset/about/cv.pdf" download="cv.pdf" class="btn-cv">
+                <i class="fa-solid fa-file-arrow-down"></i>
+                Download CV
+              </a>
+
+              <a href="#kontak" class="btn-outline">
+                <i class="fa-solid fa-paper-plane"></i>
+                Hubungi Saya
+              </a>
+            </div>
+
+            <div class="about-meta">
+              <div class="meta-item">
+                <small>Email</small>
+                <p>valent.aditya1210@gmail.com</p>
+              </div>
+              <div class="meta-item">
+                <small>Instagram</small>
+                <p>@ryuu.len</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== EXPERIENCE  ===================== -->
+    <section class="section" id="experience">
+      <div class="information container">
+        <div class="title">
+          <!-- <div class="tes">
+            <div></div>
+            <h3>Experience</h3>
+          </div> -->
+          <h1 class="experience_title">Jelajahi Perjalanan Saya</h1>
+          <div class="description">
+          <div>
+          <p>
+            Dari sisi teknis perangkat keras hingga pengembangan full-stack dan manajemen bisnis, rekam jejak saya mencerminkan dedikasi untuk terus berkembang. Jelajahi bagaimana kombinasi keahlian ini memungkinkan saya untuk menghadapi tantangan profesional dari berbagai sudut pandang dengan hasil yang optimal.
+          </p>
+          <a href="#kontak">Hubungi saya</a>
+        </div>
+        </div>
+        </div>
+
+        
+      </div>
+
+      <div class="description-mb container">
+        <div>
+          <p>
+            Dari sisi teknis perangkat keras hingga pengembangan full-stack dan manajemen bisnis, rekam jejak saya mencerminkan dedikasi untuk terus berkembang. Jelajahi bagaimana kombinasi keahlian ini memungkinkan saya untuk menghadapi tantangan profesional dari berbagai sudut pandang dengan hasil yang optimal.
+          </p>
+          <a href="#kontak">Hubungi saya</a>
+        </div>
+      </div>
+
+      <div class="experience_cards container">
+        <div class="card">
+          <span class="company_name">Creative Software</span>
+          <h3>Teknisi Komputer</h3>
+          <p class="year">2021 - 2024</p>
+        </div>
+
+        <div class="card">
+          <span class="company_name">PT.Diginet Media Yogyakarta</span>
+          <h3>Intern | FullStack Developer</h3>
+          <p class="year">April - September 2023</p>
+        </div>
+
+        <div class="card">
+          <span class="company_name">PT. Kontakperkasa Futures Yogyakarta</span>
+          <h3>Part-time | Staff Manager Business Development </h3>
+          <p class="year">2025</p>
+        </div>
+
+        <div class="card">
+          <span class="company_name">Santaiinaja.id</span>
+          <h3>Part-time | Web Developer & UI/UX</h3>
+          <p class="year">2025 - Sekarang</p>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- ===================== PORTFOLIO ===================== -->
+    <section id="portfolio" class="section bg-light">
+      <div class="container">
+        <div class="p-head">
+          <div>
+            <small class="p-kicker">Valent Aditya Hermanus</small>
+            <h2 class="p-title">portofolio <br /></h2>
+          </div>
+
+          <div class="p-actions">
+            <button class="p-icon-btn" type="button" aria-label="Previous" id="p-prev">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="p-icon-btn" type="button" aria-label="Next" id="p-next">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="p-grid" id="page1">
+          <article class="p-card" data-aos="fade-right" data-aos-duration="2000">
+            <div class="p-img" style="background-color: white;">
+              <img src="../asset/porto/android.png" style="height: 100%; width: auto; margin-left: 200px;" alt="COINAC"  id="android1"/>
+              <!-- <img src="../asset/porto/android2.png" style="height: 100%; width: auto; margin-left: 200px;" alt="COINAC" id="android2"/> -->
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>Aplikasi Order Menu Online</h3>
+                <p>
+                  Aplikasi ini dibuat dengan tujuan mengurangi adanya antri/pelayanan secara manual di sebuah restoran,dengan ada sistem ini pelanggan hanya perlu pesan online di meja makan.
+                </p>
+              </div>
+              <div class="p-year"></div>
+            </div>
+          </article>
+
+          <article class="p-card" data-aos="fade-left" data-aos-duration="2000">
+            <div class="p-img">
+              <img src="../asset/porto/damkar2.png" alt="COPLO" style="height: 100%; width: auto;margin-top: 10px;"/>
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>Website Damkar Yogyakarta</h3>
+                <p>
+                  Website Ini di buat menggunakan Angular.JS untuk memantau dan memanage data kebakaran di Yogyakarta
+                </p>
+              </div>
+              <div class="p-year"></div>
+            </div>
+          </article>
+
+          <article class="p-card" data-aos="fade-right" data-aos-duration="2000" >
+            <div class="p-img">
+              <img src="../asset/porto/diginet2.png" alt="HECTORY" />
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>Website Remake Diginet</h3>
+                <p>
+                  Website ini dirancang untuk memperbagus website diginet Yogyakarta dan dibuat menggunakan YII dan GII
+                </p>
+              </div>
+              <div class="p-year"></div>
+            </div>
+          </article>
+
+          <article class="p-card" data-aos="fade-left" data-aos-duration="2000">
+            <div class="p-img">
+              <img src="../asset/porto/portofolio.png" alt="VITYK" style="height: 100%; width: auto;"/>
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>Website Portofolio</h3>
+                <p>
+                  web portofolio dibuat menggunakan next.js dengan tema simpel dan clean
+                </p>
+              </div>
+              <div class="p-year"></div>
+            </div>
+          </article>
+        </div>
+
+        <div class="p-grid hidden" id="page2" >
+          <article class="p-card" data-aos="fade-right" data-aos-duration="2000">
+            <div class="p-img">
+              <img src="../asset/porto/Screenshot 2025-06-20 103356.png" style="height: 100%; width: auto;margin-top: 10px;" alt="COINAC" />
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>Aplikasi UAS Python</h3>
+                <p>
+                  saya membuat POS kasir dengan python 
+                </p>
+              </div>
+              <div class="p-year"></div>
+            </div>
+          </article>
+
+          <article class="p-card" data-aos="fade-left" data-aos-duration="2000">
+            <div class="p-img">
+              <img src="../asset/porto/mabarVIP.png" alt="COPLO" />
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>Website antian mabar VIP</h3>
+                <p>
+                  web ini saya buat untuk memudahkan owner dalam menglihat antrian mabar agar tidak ada user yang ke skip dan jatah user dapat di simpan, saya menggunakan google firebase
+                </p>
+              </div>
+              <div class="p-year"></div>
+            </div>
+          </article>
+
+          <article class="p-card" data-aos="fade-right" data-aos-duration="2000" >
+            <div class="p-img">
+              <img src="../asset/porto/uiux.png" alt="HECTORY" />
+            </div>
+            <div class="p-body">
+              <div class="p-text">
+                <h3>UI/UX bontang</h3>
+                <p>
+                  pembuatan UI/UX dalam Team
+                </p>
+              </div>
+              <div class="p-year"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GALERI ===================== -->
+    <section id="galeri-karya" class="section">
+      <div class="container">
+        <h2 class="section-title">Pencapaian</h2>
+      </div>
+
+      <div class="g-marquee">
+        <div class="g-track" id="galeri-Track">
+          <div class="g-item">
+            <img src="../asset/galeri-karya/cd.PNG" alt="Karya 1" />
+            <div class="g-overlay">
+              <h4>Sertif Code Combat </h4>
+              <p>Python</p>
+            </div>
+          </div>
+
+          <div class="g-item">
+            <img src="../asset/galeri-karya/diginet.jpg" alt="Karya 2" />
+            <div class="g-overlay">
+              <h4>Sertif PKL</h4>
+              <p>PT.DIGINET MEDIA YOGYAKARTA</p>
+            </div>
+          </div>
+
+          <div class="g-item">
+            <img src="../asset/galeri-karya/digiup.jpg" alt="Karya 3" />
+            <div class="g-overlay">
+              <h4>Sertif UI/UX</h4>
+              <p>UI/UX DIGIUP TELKOM</p>
+            </div>
+          </div>
+
+          <div class="g-item">
+            <img src="../asset/galeri-karya/oracel.png" alt="Karya 4" />
+            <div class="g-overlay">
+              <h4>Sertif oracel</h4>
+              <p></p>
+            </div>
+          </div>
+
+          <div class="g-item">
+            <img src="../asset/galeri-karya/mlbb.png" alt="Karya 5" />
+            <div class="g-overlay">
+              <h4>sertif MLBB</h4>
+              <p></p>
+            </div>
+          </div>
+          <div class="g-item">
+            <img src="../asset/galeri-karya/SECOMP.jpg" alt="Karya 1" />
+            <div class="g-overlay">
+              <h4>sertif SECOMP</h4>
+              <p>UI/UX</p>
+            </div>
+          </div>
+
+          <!-- <div class="g-item">
+            <img src="https://picsum.photos/400/300?random=7" alt="Karya 1" />
+            <div class="g-overlay">
+              <h4>Project UI</h4>
+              <p>Landing page modern + animasi halus</p>
+            </div>
+          </div> -->
+        </div>
+      <!-- <div aria-hidden class="g-track" id="galeri-Track"> -->
+      </div>
+    </section>
+
+    <!-- ===================== KONTAK ===================== -->
+    <section id="kontak" class="section bg-light">
+      <div class="container" data-aos="fade-up" data-aos-duration="2000">
+        <h2 class="section-title">Hubungi Saya</h2>
+
+        <div class="k-unified-card">
+          <div class="k-info-side">
+            <div class="info-header">
+              <h3>Mari Terhubung</h3>
+              <p>Silakan hubungi saya jika ada pertanyaan atau tawaran kerja sama.</p>
+            </div>
+
+            <div class="info-list">
+              <a href="mailto:valent.aditya1210@gmail.com" class="info-item">
+                <div class="icon-box"><i class="fas fa-envelope"></i></div>
+                <div class="info-text">
+                  <span>EMAIL</span>
+                  <p>valent.aditya1210@gmail.com</p>
+                </div>
+              </a>
+
+              <a href="https://wa.me/6287836118750" target="_blank" class="info-item">
+                <div class="icon-box"><i class="fab fa-whatsapp"></i></div>
+                <div class="info-text">
+                  <span>WHATSAPP</span>
+                  <p>+62 878 3611 8750</p>
+                </div>
+              </a>
+
+              <a href="https://www.instagram.com/ryuu.len/" target="_blank" class="info-item">
+                <div class="icon-box"><i class="fab fa-instagram"></i></div>
+                <div class="info-text">
+                  <span>INSTAGRAM</span>
+                  <p>@ryuu.len</p>
+                </div>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/valent-aditya-hermanus/"
+                target="_blank"
+                class="info-item"
+              >
+                <div class="icon-box"><i class="fab fa-linkedin"></i></div>
+                <div class="info-text">
+                  <span>LINKEDIN</span>
+                  <p>valent aditya hermanus</p>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="k-form-side">
+            <form id="Kontak-Form" action="#kontak" novalidate>
+              <div class="form-group">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" id="name" placeholder="Masukkan nama Anda" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Masukkan email aktif" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">No Telepon</label>
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder="08xx-xxxx-xxxx"
+                  required
+                  maxlength="18"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="message">Pesan</label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder="Tulis pesan Anda di sini..."
+                  required
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn-kontak" id="button">Kirim Pesan</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2024-2025 Valent Aditya Hermanus</p>
+      </div>
+    </footer>
+
+    <!-- ===================== JAVASCRIPT ===================== -->
+    <script>
+      // ===================== EFEK TULISAN =====================
+      (function () {
+        const namaPanjang = "Valent Aditya Hermanus";
+        const namaPanggilan = "Valent";
+
+        const kecepatanNulis = 100;
+        const kecepatanHapus = 50;
+        const jeda = 5000;
+
+        const element = document.getElementById("typing-text");
+        if (!element) return;
+
+        let i = 0;
+        let hapusText = false;
+        let pakaiNamaPanjang = true;
+
+        function run() {
+          const fullText = pakaiNamaPanjang ? namaPanjang : namaPanggilan;
+
+          if (hapusText) {
+            element.textContent = fullText.substring(0, i - 1);
+            i--;
+          } else {
+            element.textContent = fullText.substring(0, i + 1);
+            i++;
+          }
+
+          let delay = hapusText ? kecepatanHapus : kecepatanNulis;
+
+          if (!hapusText && i === fullText.length) {
+            hapusText = true;
+            delay = jeda;
+          } else if (hapusText && i === 0) {
+            hapusText = false;
+            pakaiNamaPanjang = !pakaiNamaPanjang;
+            delay = 500;
+          }
+
+          setTimeout(run, delay);
+        }
+
+        window.addEventListener("load", run);
+      })();
+
+      // ===================== FORMAT TELP =====================
+      (function () {
+        const phoneInput = document.getElementById("phone");
+        if (!phoneInput) return;
+
+        phoneInput.addEventListener("input", function (e) {
+          let input = e.target.value.replace(/\D/g, "");
+
+          if (input.startsWith("0")) {
+            input = "62" + input.substring(1);
+          }
+
+          if (input.length === 0) {
+            e.target.value = "";
+            return;
+          }
+
+          let formatted = "+";
+
+          if (input.length > 0) formatted += input.substring(0, 2);
+          if (input.length > 2) formatted += " " + input.substring(2, 5);
+          if (input.length > 5) formatted += "-" + input.substring(5, 9);
+          if (input.length > 9) formatted += "-" + input.substring(9, 13);
+
+          e.target.value = formatted;
+        });
+      })();
+
+      // ===================== KONTAK SWAL+LOCAL =====================
+      (function () {
+        const form = document.getElementById("Kontak-Form");
+        if (!form) return;
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const name = document.getElementById("name").value.trim();
+          let email = document.getElementById("email").value.trim();
+          const phone = document.getElementById("phone").value.trim();
+          const message = document.getElementById("message").value.trim();
+
+          if (!email.includes("@")) {
+            Swal.fire({
+              icon: "warning",
+              title: "Format Email Salah",
+            });
+            return;
+          }
+
+          if (email.includes(" ")) {
+            email = email.replaceAll(" ", "");
+          }
+
+          if (!name || !email || !phone || !message) {
+            Swal.fire({
+              icon: "warning",
+              title: "Form belum lengkap",
+            });
+            return;
+          }
+
+          const dataLama = JSON.parse(localStorage.getItem("kontakMasuk")) || [];
+
+          const dataBaru = {
+            nama: name,
+            email: email,
+            nomor: phone,
+            pesan: message,
+            tanggal: new Date().toLocaleString("id-ID"),
+          };
+
+          dataLama.push(dataBaru);
+          localStorage.setItem("kontakMasuk", JSON.stringify(dataLama));
+
+          Swal.fire({
+            title: "Mengirim...",
+            text: "Mohon tunggu sebentar",
+            allowOutsideClick: false,
+            didOpen: () => Swal.showLoading(),
+            timer: 1300,
+          }).then(() => {
+            Swal.fire({
+              icon: "success",
+              title: "Pesan terkirim!",
+              text: "Terima kasih sudah menghubungi saya.",
+              showConfirmButton: false,
+              timer: 1800,
+            });
+
+            form.reset();
+            document.getElementById("kontak").scrollIntoView({ behavior: "smooth" });
+          });
+        });
+      })();
+
+      // ===================== DARKMODE =====================
+      (function () {
+        const toggle = document.getElementById("darkToggle");
+        if (!toggle) return;
+
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme === "dark") {
+          document.body.classList.add("dark-mode");
+          toggle.checked = true;
+        }
+
+        toggle.addEventListener("change", () => {
+          document.body.classList.toggle("dark-mode");
+          localStorage.setItem(
+            "theme",
+            document.body.classList.contains("dark-mode") ? "dark" : "light"
+          );
+        });
+      })();
+
+      // ===================== PORTOFOLIO PAGE  =====================
+      (function () {
+        const page1 = document.getElementById("page1");
+        const page2 = document.getElementById("page2");
+        const nextBtn = document.getElementById("p-next");
+        const prevBtn = document.getElementById("p-prev");
+
+        if (!page1 || !page2 || !nextBtn || !prevBtn) return;
+
+        nextBtn.addEventListener("click", function () {
+          page1.classList.add("hidden");
+          page2.classList.remove("hidden");
+        });
+
+        prevBtn.addEventListener("click", function () {
+          page1.classList.remove("hidden");
+          page2.classList.add("hidden");
+        });
+      })();
+
+      // ===================== GALERI INFINITE =====================
+      (function () {
+        const track = document.getElementById("galeri-Track");
+        if (!track) return;
+
+        const originals = Array.from(track.children);
+
+        originals.forEach((item) => {
+          const clone = item.cloneNode(true);
+          clone.setAttribute("aria-hidden", "true");
+          track.appendChild(clone);
+        });
+
+        function setScrollDistance() {
+          let distance = 0;
+
+          originals.forEach((el) => {
+            distance += el.getBoundingClientRect().width;
+          });
+
+          const styles = getComputedStyle(track);
+          const gap = parseFloat(styles.gap || styles.columnGap || "0") || 0;
+
+          distance += gap * originals.length;
+          track.style.setProperty("--scroll-distance", `-${distance}px`);
+        }
+
+        window.addEventListener("load", setScrollDistance);
+        window.addEventListener("resize", setScrollDistance);
+      })();
+
+      // ===================== NAVBAR MOBILE TOGGLE  =====================
+      (function () {
+        const buttonMenu = document.getElementById("menuToggle");
+        const navbar = document.getElementById("mainNav");
+        if (!buttonMenu || !navbar) return;
+
+        buttonMenu.addEventListener("click", () => {
+          navbar.classList.toggle("active");
+          buttonMenu.textContent = navbar.classList.contains("active") ? "✕" : "☰";
+        });
+
+        // auto close menu saat klik item
+        document.querySelectorAll(".nav-links-revisi .item").forEach((a) => {
+          a.addEventListener("click", () => {
+            if (navbar.classList.contains("active")) {
+              navbar.classList.remove("active");
+              buttonMenu.textContent = "☰";
+            }
+          });
+        });
+      })();
+
+      // ===================== AOS INIT =====================
+      AOS.init();
+
+
+      const img = document.getElementById("profileImage");
+      const video = document.getElementById("profileVideo");
+
+      let showImage = true;
+
+      img.classList.add("active");
+
+      setInterval(() => {
+        if (showImage) {
+          img.classList.remove("active");
+          video.classList.add("active");
+          video.play();
+        } else {
+          video.pause();
+          video.currentTime = 0;
+          video.classList.remove("active");
+          img.classList.add("active");
+        }
+        showImage = !showImage;
+      }, 6500);
+
+
+    (function () {
+    const aboutSection = document.getElementById("about");
+    const video = document.getElementById("profileVideo");
+
+    if (!aboutSection || !video) return;
+
+    video.muted = true;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.muted = false;
+          } else {
+            video.muted = true;
+          }
+        });
+      },
+      {
+        threshold: 0.5, 
+      }
+    );
+
+    observer.observe(aboutSection);
+  })();
+
+    </script>
+  </body>
+</html>
