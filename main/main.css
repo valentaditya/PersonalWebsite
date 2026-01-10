@@ -22,7 +22,7 @@ body {
 .container {
   width: 85%;
   margin: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .section {
@@ -343,14 +343,23 @@ body {
   overflow: hidden;
   background: #f3f4f6;
   border: 1px solid #eef2f7;
+  width: 100%;
+  max-width: 380px;
 }
 
-.about-photo img {
+.about-photo img,
+.about-photo video  {
   width: 100%;
   height: 360px;
   object-fit: cover;
   display: block;
   transform: scale(1.02);
+  border-radius: 20px;
+  display: none;
+}
+.about-photo img.active,
+.about-photo video.active {
+  display: block;
 }
 
 .about-status {
@@ -691,7 +700,7 @@ body {
 /* =========================================================
    PORTFOLIO CAROUSEL (VERSI 2 - OPTIONAL)
 ========================================================= */
-.portfolio-carousel {
+.portfolio-carousel {  
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -722,12 +731,18 @@ body {
 }
 
 .g-track {
-  display: flex;
+  /* display: flex;
   width: max-content;
   gap: 1em;
   animation: gScroll 20s linear infinite;
   will-change: transform;
-  --start-x: 0px;
+  --start-x: 0px; */
+  display: flex;
+  width: max-content;
+  gap: 1em;
+  animation: gScroll 25s linear infinite;
+  will-change: transform;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .g-marquee:hover .g-track {
@@ -743,8 +758,8 @@ body {
 }
 
 .g-track.snap {
+  animation-play-state: paused !important; 
   animation: none !important;
-  transition: transform 450ms ease;
 }
 
 .g-item img {
@@ -784,6 +799,11 @@ body {
   font-size: 0.9rem;
   color: #374151;
   line-height: 1.45;
+}
+.g-grid{
+  display: flex;
+  gap: 1em;
+  padding-right: 1em;
 }
 
 .g-item:hover img {
@@ -1037,7 +1057,7 @@ footer {
 }
 
 .information {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1.2fr 1fr;
   align-items: center;
   gap: 2rem;
@@ -1181,10 +1201,10 @@ footer {
 /* animasi marquee (geser sejauh set pertama, dibantu JS) */
 @keyframes gScroll {
   from {
-    transform: translateX(var(--start-x));
+    transform: translateX(0);
   }
   to {
-    transform: translateX(calc(var(--start-x) + var(--scroll-distance, -50%)));
+    transform: translateX(-50%);
   }
 }
 
@@ -1332,6 +1352,37 @@ footer {
     height: 160px;
   }
 }
+@media (max-width: 768px) {
+
+ .p-actions {
+    display: flex !important; 
+    justify-content: center;
+    width: 100%;
+    gap: 20px; 
+  }
+  
+.p-icon-btn {
+  margin-top: 25px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+  color: #111827;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+}
+
+.p-icon-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+}
 
 /* =========================================================
    DARK MODE
@@ -1362,7 +1413,6 @@ body.dark-mode .button-open {
   color: #fff
 }
 
-/* navbar capsule versi 2 */
 body.dark-mode .header .navbar-rev {
   background: #050e3c;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
@@ -1405,13 +1455,17 @@ body.dark-mode .skill {
   color: #e5e7eb;
 }
 
+
+
 body.dark-mode .about-desc,
 body.dark-mode .about-highlight,
 body.dark-mode .point p,
 body.dark-mode .p-kicker {
   color: #94a3b8;
 }
-
+body.dark-mode .point h4{
+  color:#e5e7eb
+}
 body.dark-mode .quick-item,
 body.dark-mode .meta-item,
 body.dark-mode .skill,
@@ -1517,4 +1571,7 @@ body.dark-mode .cta_card h2 {
 body.dark-mode .company_name,
 body.dark-mode .year {
   color: #94a3b8;
+}
+body.dark-mode .card h3{
+  color: #e5e7eb
 }
